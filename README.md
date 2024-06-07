@@ -19,13 +19,13 @@ This is a simulation of an organization, whereby access to restricted content is
 
 For the first part of the algorithm, I opened the "allow_list.txt" file. Here is where I first assigned this file name as a string to the import_file variable: <br/>
 <p align="center">
-<img src="https://i.imgur.com/oHIWiLi.png" height="40%" width="40%" alt="PythonAlgorythm"/>
+<img src="https://i.imgur.com/oHIWiLi.png" height="40%" width="40%" alt="PythonAlgorithm"/>
 <br />
 <br />
 <p align="left">
 Then, I used a with statement to open the file:  <br/>
 <p align="center">
-<img src="https://i.imgur.com/5hIZxjo.png" height="50%" width="50%" alt="PythonAlgorythm"/>
+<img src="https://i.imgur.com/5hIZxjo.png" height="50%" width="50%" alt="PythonAlgorithm"/>
 <br />
 <p align="left">
 In the this algorithm, the with statement is used with the .open() function in read mode opens the allow list file for reading purposes. It allows me to access the IP addresses stored in the allow list file. The with keyword will help manage the resources by closing the file after exiting the with statement.
@@ -36,7 +36,7 @@ In the this algorithm, the with statement is used with the .open() function in r
 
 In order to read the file contents, I used the .read() method to convert it into the string: <br/>
 <p align="center">
-<img src="https://i.imgur.com/quH8FIR.png" height="60%" width="60%" alt="PythonAlgorythm"/>
+<img src="https://i.imgur.com/quH8FIR.png" height="60%" width="60%" alt="PythonAlgorithm"/>
 <br />
 
 <p align="left">
@@ -50,7 +50,7 @@ In summary, this code reads the contents of the "allow_list.txt" file into a str
 
 I wanted it in list format so that I could individually delete IP addresses from the allow list. So next, I used the .split() method to turn the ip_addresses string into a list:  <br/>
 <p align="center">
-<img src="https://i.imgur.com/qlnqOrv.png" height="50%" width="50%" alt="PythonAlgorythm"/> <br/>
+<img src="https://i.imgur.com/qlnqOrv.png" height="50%" width="50%" alt="PythonAlgorithm"/> <br/>
 <p align="left">
 The purpose of splitting ip_addresses into a list is to make it easier to remove IP addresses from the allow list. By default, the .split() function splits the text by whitespace into list elements. In this algorithm, the .split() function takes the data stored in the variable ip_addresses, which is a string of IP addresses that are each separated by a whitespace, and it converts this string into a list of IP addresses. To store this list, I reassigned it back to the variable ip_addresses.
 <br />
@@ -60,7 +60,7 @@ The purpose of splitting ip_addresses into a list is to make it easier to remove
 
 A crucial part of my algorithm is to iterate over the elements of the list, which in our case are IP addresses. To do this, I incorporated a for loop: <br/>
 <p align="center">
-<img src="https://i.imgur.com/MXpN4At.png" height="34%" width="34%" alt="PythonAlgorythm"/> <br />
+<img src="https://i.imgur.com/MXpN4At.png" height="34%" width="34%" alt="PythonAlgorithm"/> <br />
 <p align="left">
 The overall purpose of the for loop in a Python algorithm like this is to apply specific code statements to all elements in a sequence. After the for keyword, there is the loop variable element, followed by the keyword in. That indicates to iterate through the sequence ip_addresses and assign each value to the loop variable element. 
 <br />
@@ -70,7 +70,7 @@ The overall purpose of the for loop in a Python algorithm like this is to apply 
 
 My algorithm requires removing any IP address from the allow list, ip_addresses, that is also contained in remove_list.  As there was no duplication in ip_addresses, I was able to use the following code to do this:  <br/>
 <p align="center">
-<img src="https://i.imgur.com/zgxvjL5.png" height="55%" width="55%" alt="PythonAlgorythm"/> <br />
+<img src="https://i.imgur.com/zgxvjL5.png" height="55%" width="55%" alt="PythonAlgorithm"/> <br />
 <p align="left">
 First, within my for loop, I created a conditional that evaluated whether or not the loop variable element was found in the ip_addresses list. I did this because applying .remove() to elements that were not found in ip_addresses would result in an error. <br />
 Then, within that conditional, I applied .remove() to ip_addresses. I passed in the loop variable element as the argument so that each IP address that was in the remove_list would be removed from ip_addresses.
@@ -81,12 +81,12 @@ Then, within that conditional, I applied .remove() to ip_addresses. I passed in 
 
 As a final step, I needed to update the allow list file with the revised list of IP addresses. To do so, I first needed to convert the list back into a string. I used the .join() method for this:  <br/>
 <p align="center">
-<img src="https://i.imgur.com/QvwRrsT.png" height="60%" width="60%" alt="PythonAlgorythm"/> <br />
+<img src="https://i.imgur.com/QvwRrsT.png" height="60%" width="60%" alt="PythonAlgorithm"/> <br />
 <p align="left">
 I used the .join() method in order to join all elements of list ip_addresses into a string so that I could pass it as an argument to the .write() method when writing to the file "allow_list.txt". I made use of the string ("\n") as a separator to instruct Python to place each element on a new line.  <br />
 Then, I used another with statement and the .write() method to update the file: <br/>
 <p align="center">
-<img src="https://i.imgur.com/DzHCJMb.png" height="45%" width="45%" alt="PythonAlgorythm"/> <br />
+<img src="https://i.imgur.com/DzHCJMb.png" height="45%" width="45%" alt="PythonAlgorithm"/> <br />
 <p align="left">
 This time, I used a second argument of "w" with the open() function in the with statement to call the .write() function in the body of the with statement. The .write() function writes string data to a specified file and replaces any existing file content. <br />
 In this case I wanted to write the updated allow list as a string to the file "allow_list.txt". This way, the restricted content will no longer be accessible to any IP addresses that were removed from the allow list.
