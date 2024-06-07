@@ -1,4 +1,4 @@
-[<h1>Python - Algorithm for file updates</h1>](https://github.com/Josef314314/PythonAlgorithmActivity/blob/main/Algorithm%20for%20file%20updates.py)
+<h1>Python - Algorithm for file updates</h1>
 
 <h2>Project description</h2>
 This is a simulation of an organization, whereby access to restricted content is controlled using an allow list of IP addresses. The "allow_list.txt" file identifies these IP addresses. An additional remove list contains IP addresses that should no longer have access to this content. I created an algorithm that automatically updates the "allow_list.txt" file to remove these IP addresses.
@@ -15,7 +15,7 @@ This is a simulation of an organization, whereby access to restricted content is
 
 <h2>Program walk-through:</h2>
 
-- <b>Open the file that contains the allow list:
+- <b>Open the file that contains the allow list:</b>
 
 For the first part of the algorithm, I opened the "allow_list.txt" file. Here is where I first assigned this file name as a string to the import_file variable: <br/>
 <p align="center">
@@ -32,7 +32,7 @@ In the this algorithm, the with statement is used with the .open() function in r
 <br />
 <br />
   
-- <b>Read the file contents:
+- <b>Read the file contents:</b>
 
 In order to read the file contents, I used the .read() method to convert it into the string: <br/>
 <p align="center">
@@ -46,7 +46,7 @@ In summary, this code reads the contents of the "allow_list.txt" file into a str
 <br />
 <br />
 
-- <b>Convert the string into a list:
+- <b>Convert the string into a list:</b>
 
 I wanted it in list format so that I could individually delete IP addresses from the allow list. So next, I used the .split() method to turn the ip_addresses string into a list:  <br/>
 <p align="center">
@@ -56,7 +56,7 @@ The purpose of splitting ip_addresses into a list is to make it easier to remove
 <br />
 <br />
 
-- <b>Iterate through the remove list:
+- <b>Iterate through the remove list:</b>
 
 A crucial part of my algorithm is to iterate over the elements of the list, which in our case are IP addresses. To do this, I incorporated a for loop: <br/>
 <p align="center">
@@ -66,7 +66,7 @@ The overall purpose of the for loop in a Python algorithm like this is to apply 
 <br />
 <br />
 
-- <b>Remove IP addresses that are on the remove list:
+- <b>Remove IP addresses that are on the remove list:</b>
 
 My algorithm requires removing any IP address from the allow list, ip_addresses, that is also contained in remove_list.  As there was no duplication in ip_addresses, I was able to use the following code to do this:  <br/>
 <p align="center">
@@ -77,7 +77,7 @@ Then, within that conditional, I applied .remove() to ip_addresses. I passed in 
 <br />
 <br />
 
-- <b>Update the file with the revised list of IP addresses:
+- <b>Update the file with the revised list of IP addresses:</b>
 
 As a final step, I needed to update the allow list file with the revised list of IP addresses. To do so, I first needed to convert the list back into a string. I used the .join() method for this:  <br/>
 <p align="center">
