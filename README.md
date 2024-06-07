@@ -1,4 +1,4 @@
-<h1>Python - Algorithm for file updates</h1>
+[<h1>Python - Algorithm for file updates</h1>](https://github.com/Josef314314/PythonAlgorithmActivity/blob/main/Algorithm%20for%20file%20updates.py)
 
 <h2>Project description</h2>
 This is a simulation of an organization, whereby access to restricted content is controlled using an allow list of IP addresses. The "allow_list.txt" file identifies these IP addresses. An additional remove list contains IP addresses that should no longer have access to this content. I created an algorithm that automatically updates the "allow_list.txt" file to remove these IP addresses.
