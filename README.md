@@ -1,7 +1,8 @@
 <h1>Python - Algorithm for file updates</h1>
 
 <h2>Project description</h2>
-This is a simulation of an organization, whereby access to restricted content is controlled using an allow list of IP addresses. The "allow_list.txt" file identifies these IP addresses. An additional remove list contains IP addresses that should no longer have access to this content. I created an algorithm that automatically updates the "allow_list.txt" file to remove these IP addresses.
+
+This is a simulation of an organization, whereby access to restricted content is controlled using an allow list of IP addresses. The `allow_list.txt` file identifies these IP addresses. An additional remove list contains IP addresses that should no longer have access to this content. I created an algorithm that automatically updates the `allow_list.txt` file to remove these IP addresses.
 <br />
 
 
@@ -17,13 +18,19 @@ This is a simulation of an organization, whereby access to restricted content is
 
 - <b>Open the file that contains the allow list:</b>
 
-For the first part of the algorithm, I opened the "allow_list.txt" file. Here is where I first assigned this file name as a string to the import_file variable: <br/>
+For the first part of the algorithm, I opened the `allow_list.txt` file. Here is where I first assigned this file name as a string to the `import_file` variable: <br/>
 <p align="center">
+  
+  ```
+    #Assign import file to the name of the file
+    import_file = "allow_list.txt"
+  ```
 <img src="https://i.imgur.com/oHIWiLi.png" height="40%" width="40%" alt="PythonAlgorithm"/>
 <br />
 <br />
 <p align="left">
-Then, I used a with statement to open the file:  <br/>
+  
+Then, I used a `with` statement to open the file:  <br/>
 <p align="center">
 <img src="https://i.imgur.com/5hIZxjo.png" height="50%" width="50%" alt="PythonAlgorithm"/>
 <br />
