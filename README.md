@@ -19,20 +19,20 @@ This is a simulation of an organization, whereby access to restricted content is
 - <b>Open the file that contains the allow list:</b>
 
 For the first part of the algorithm, I opened the `allow_list.txt` file. Here is where I first assigned this file name as a string to the `import_file` variable: <br/>
-<p align="center">
   
   ```
-    #Assign import file to the name of the file
+    #Assign `import_file` to the name of the file
     import_file = "allow_list.txt"
   ```
-<img src="https://i.imgur.com/oHIWiLi.png" height="40%" width="40%" alt="PythonAlgorithm"/>
 <br />
-<br />
-<p align="left">
   
 Then, I used a `with` statement to open the file:  <br/>
-<p align="center">
-<img src="https://i.imgur.com/5hIZxjo.png" height="50%" width="50%" alt="PythonAlgorithm"/>
+
+  ```
+    #Build `with` statement to read in the initial contents of the file
+    with open(import_file, "r") as file:
+  ```
+
 <br />
 <p align="left">
 In the this algorithm, the with statement is used with the .open() function in read mode opens the allow list file for reading purposes. It allows me to access the IP addresses stored in the allow list file. The with keyword will help manage the resources by closing the file after exiting the with statement.
